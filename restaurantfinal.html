@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Savor & Spice - Full CSS Filterable Menu</title>
+<link rel="stylesheet" href="ResCSS.css">
+</head>
+<body>
+
+<h1>SAVOR & SPICE</h1>
+<p class="description">
+  A place where bold flavors meet an elegant dining experience. We bring you a curated menu crafted with fresh ingredients, blending vibrant spices and classic techniques to delight your palate.
+</p>
+
+<!-- Filters Container -->
+<div class="filter-wrapper">
+  <div class="filters" aria-label="Filter menu items">
+
+    <!-- Course Filter -->
+    <input type="radio" name="course" id="course-all" value="all" checked />
+    <label for="course-all" tabindex="0">All Courses</label>
+
+    <input type="radio" name="course" id="course-starter" value="starter" />
+    <label for="course-starter" tabindex="0">Starters</label>
+
+    <input type="radio" name="course" id="course-main" value="main" />
+    <label for="course-main" tabindex="0">Mains</label>
+
+    <input type="radio" name="course" id="course-side" value="side" />
+    <label for="course-side" tabindex="0">Sides</label>
+
+    <input type="radio" name="course" id="course-dessert" value="dessert" />
+    <label for="course-dessert" tabindex="0">Desserts</label>
+
+    <input type="radio" name="course" id="course-beverage" value="beverage" />
+    <label for="course-beverage" tabindex="0">Beverages</label>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <!-- Dietary Filter -->
+    <input type="radio" name="diet" id="diet-all" value="all" checked />
+    <label for="diet-all" tabindex="0">All Diets</label>
+
+    <input type="radio" name="diet" id="diet-vegan" value="vegan" />
+    <label for="diet-vegan" tabindex="0">Vegan</label>
+
+    <input type="radio" name="diet" id="diet-gf" value="glutenfree" />
+    <label for="diet-gf" tabindex="0">Gluten-Free</label>
+
+  </div>
+
+  <!-- Menu Container inside filter wrapper for CSS sibling selectors -->
+  <div class="menu-container">
+
+    <!-- Starters -->
+    <article class="dish-card starter" tabindex="0" aria-label="Bruschetta al Pomodoro">
+      <img src="im1.jpg" alt="Bruschetta al Pomodoro" />
+      <h3>Bruschetta al Pomodoro</h3>
+      <p class="description">Grilled bread, vine tomatoes, basil & olive oil.</p>
+      <p class="price">₹300</p>
+    </article>
+
+    <article class="dish-card starter glutenfree" tabindex="0" aria-label="Burrata & Heirloom">
+      <img src="im2.jpg" alt="Burrata & Heirloom" />
+      <h3>Burrata & Heirloom</h3>
+      <p class="description">Creamy burrata with heirloom tomatoes and pesto.</p>
+      <p class="price">₹450</p>
+    </article>
+
+    <article class="dish-card starter glutenfree" tabindex="0" aria-label="Tuna Tartare">
+      <img src="im3.jpg" alt="Tuna Tartare" />
+      <h3>Tuna Tartare</h3>
+      <p class="description">Fresh Ahi tuna with avocado & citrus soy.</p>
+      <p class="price">₹530</p>
+    </article>
+
+    <!-- Mains -->
+    <article class="dish-card main glutenfree" tabindex="0" aria-label="Carne de Sol">
+      <img src="im4.jpg" alt="Carne de Sol" />
+      <h3>Carne de Sol</h3>
+      <p class="description">Brazilian sun-dried beef, pan-seared and served with cassava and sautéed onions.</p>
+      <div class="options">
+        <label for="carne-size">Size</label>
+        <select id="carne-size" name="carne-size">
+          <option>Regular</option>
+          <option>Large (+₹150)</option>
+        </select>
+      </div>
+      <div class="options">
+        <label for="carne-spice">Spice Level</label>
+        <select id="carne-spice" name="carne-spice">
+          <option>Mild</option>
+          <option>Medium</option>
+          <option>Hot</option>
+        </select>
+      </div>
+      <p class="price">₹550</p>
+      <div class="badge">Best Seller</div>
+    </article>
+
+    <article class="dish-card main" tabindex="0" aria-label="Milanesa">
+      <img src="im5.jpg" alt="Milanesa" />
+      <h3>Milanesa</h3>
+      <p class="description">Crispy breaded beef cutlet, golden fried and served with fries and lemon.</p>
+      <div class="options">
+        <label for="milanesa-addons">Add-ons</label>
+        <select id="milanesa-addons" name="milanesa-addons">
+          <option>None</option>
+          <option>Extra Fries (+₹80)</option>
+          <option>Cheese Sauce (+₹100)</option>
+        </select>
+      </div>
+      <p class="price">₹500</p>
+    </article>
+
+    <article class="dish-card main glutenfree" tabindex="0" aria-label="Biryani (Indian Style)">
+      <img src="im6.jpg" alt="Biryani (Indian Style)" />
+      <h3>Biryani (Indian Style)</h3>
+      <p class="description">Fragrant basmati rice layered with spiced chicken, herbs, and fried onions.</p>
+      <div class="options">
+        <label for="biryani-meat">Choice of Meat</label>
+        <select id="biryani-meat" name="biryani-meat">
+          <option>Chicken</option>
+          <option>Mutton (+₹100)</option>
+          <option>Vegetarian</option>
+        </select>
+      </div>
+      <p class="price">₹400</p>
+    </article>
+
+    <article class="dish-card main" tabindex="0" aria-label="Chicken Karaage">
+      <img src="im7.jpg" alt="Chicken Karaage" />
+      <h3>Chicken Karaage</h3>
+      <p class="description">Japanese-style marinated chicken, deep-fried to crispy perfection.</p>
+      <div class="options">
+        <label for="karaage-dip">Choose Dip</label>
+        <select id="karaage-dip" name="karaage-dip">
+          <option>Spicy Mayo</option>
+          <option>Teriyaki Sauce</option>
+          <option>None</option>
+        </select>
+      </div>
+      <p class="price">₹350</p>
+    </article>
+
+    <article class="dish-card main glutenfree" tabindex="0" aria-label="Butter Chicken">
+      <img src="im8.jpg" alt="Butter Chicken" />
+      <h3>Butter Chicken</h3>
+      <p class="description">Tender chicken in a creamy tomato-based curry, served with warm naan bread.</p>
+      <div class="options">
+        <label for="butter-chicken-naan">Naan Option</label>
+        <select id="butter-chicken-naan" name="butter-chicken-naan">
+          <option>Butter Naan</option>
+          <option>Garlic Naan (+₹40)</option>
+          <option>Roti</option>
+        </select>
+      </div>
+      <p class="price">₹375</p>
+    </article>
+
+    <article class="dish-card main vegan glutenfree" tabindex="0" aria-label="Veggie Buddha Bowl">
+      <img src="im9.jpg" alt="Veggie Buddha Bowl" />
+      <h3>Veggie Buddha Bowl</h3>
+      <p class="description">A vibrant bowl of quinoa, roasted vegetables, chickpeas, and tahini sauce.</p>
+      <div class="options">
+        <label for="buddha-protein">Extra Protein</label>
+        <select id="buddha-protein" name="buddha-protein">
+          <option>None</option>
+          <option>Tofu (+₹70)</option>
+          <option>Chickpeas (+₹50)</option>
+        </select>
+      </div>
+      <p class="price">₹300</p>
+      <div class="badge">Chef's Special</div>
+    </article>
+
+    <article class="dish-card main" tabindex="0" aria-label="Seafood Paella">
+      <img src="im10.jpg" alt="Seafood Paella" />
+      <h3>Seafood Paella</h3>
+      <p class="description">Saffron-infused rice with shrimp, mussels, squid, and chorizo.</p>
+      <div class="options">
+        <label for="paella-spice">Spice Level</label>
+        <select id="paella-spice" name="paella-spice">
+          <option>Mild</option>
+          <option>Medium</option>
+          <option>Hot</option>
+        </select>
+      </div>
+      <p class="price">₹600</p>
+    </article>
+
+    <!-- Sides -->
+    <article class="dish-card side" tabindex="0" aria-label="Garlic Bread">
+      <img src="im11.jpg" alt="Garlic Bread" />
+      <h3>Garlic Bread</h3>
+      <p class="description">Toasted baguette topped with garlic herb butter and parsley.</p>
+      <div class="options">
+        <label for="garlic-butter">Butter Type</label>
+        <select id="garlic-butter" name="garlic-butter">
+          <option>Regular Butter</option>
+          <option>Vegan Butter (+₹30)</option>
+        </select>
+      </div>
+      <p class="price">₹150</p>
+    </article>
+
+    <article class="dish-card side vegan glutenfree" tabindex="0" aria-label="Mixed Green Salad">
+      <img src="im12.jpg" alt="Mixed Green Salad" />
+      <h3>Mixed Green Salad</h3>
+      <p class="description">Fresh lettuce, spinach, cucumbers, and tomatoes with vinaigrette.</p>
+      <div class="options">
+        <label for="salad-dressing">Dressing</label>
+        <select id="salad-dressing" name="salad-dressing">
+          <option>Vinaigrette</option>
+          <option>Caesar (+₹40)</option>
+          <option>Ranch (+₹40)</option>
+        </select>
+      </div>
+      <p class="price">₹130</p>
+    </article>
+
+    <article class="dish-card side vegan glutenfree" tabindex="0" aria-label="Sweet Potato Fries">
+      <img src="im13.jpg" alt="Sweet Potato Fries" />
+      <h3>Sweet Potato Fries</h3>
+      <p class="description">Crispy baked sweet potato fries served with a spicy aioli dip.</p>
+      <div class="options">
+        <label for="aioli-spice">Spice Level</label>
+        <select id="aioli-spice" name="aioli-spice">
+          <option>Mild</option>
+          <option>Medium</option>
+          <option>Hot</option>
+        </select>
+      </div>
+      <p class="price">₹180</p>
+    </article>
+
+    <!-- Desserts -->
+    <article class="dish-card dessert glutenfree" tabindex="0" aria-label="Chocolate Lava Cake">
+      <img src="im14.jpg" alt="Chocolate Lava Cake" />
+      <h3>Chocolate Lava Cake</h3>
+      <p class="description">Decadent warm chocolate cake with a molten center, served with vanilla ice cream.</p>
+      <div class="options">
+        <label for="lava-cake-icecream">Add Extra Ice Cream</label>
+        <select id="lava-cake-icecream" name="lava-cake-icecream">
+          <option>No</option>
+          <option>Yes (+₹50)</option>
+        </select>
+      </div>
+      <p class="price">₹200</p>
+    </article>
+
+    <article class="dish-card dessert vegan glutenfree" tabindex="0" aria-label="Mango Sorbet">
+      <img src="im15.jpg" alt="Mango Sorbet" />
+      <h3>Mango Sorbet</h3>
+      <p class="description">Refreshing mango sorbet, perfect for cleansing the palate.</p>
+      <div class="options">
+        <label for="sorbet-size">Size</label>
+        <select id="sorbet-size" name="sorbet-size">
+          <option>Single Scoop</option>
+          <option>Double Scoop (+₹40)</option>
+        </select>
+      </div>
+      <p class="price">₹150</p>
+    </article>
+
+    <article class="dish-card dessert" tabindex="0" aria-label="Tiramisu">
+      <img src="im16.jpg" alt="Tiramisu" />
+      <h3>Tiramisu</h3>
+      <p class="description">Classic Italian layered dessert with mascarpone, coffee, and cocoa.</p>
+      <div class="options">
+        <label for="tiramisu-alcohol">Alcohol Added</label>
+        <select id="tiramisu-alcohol" name="tiramisu-alcohol">
+          <option>No</option>
+          <option>Yes (+₹60)</option>
+        </select>
+      </div>
+      <p class="price">₹225</p>
+    </article>
+
+    <!-- Beverages -->
+    <article class="dish-card beverage vegan glutenfree" tabindex="0" aria-label="Fresh Mint Lemonade">
+      <img src="im17.jpg" alt="Fresh Mint Lemonade" />
+      <h3>Fresh Mint Lemonade</h3>
+      <p class="description">Cool and refreshing lemonade infused with fresh mint leaves.</p>
+      <div class="options">
+        <label for="lemonade-sweetness">Sweetness Level</label>
+        <select id="lemonade-sweetness" name="lemonade-sweetness">
+          <option>Normal</option>
+          <option>Less Sweet</option>
+          <option>Extra Sweet</option>
+        </select>
+      </div>
+      <p class="price">₹120</p>
+    </article>
+
+    <article class="dish-card beverage glutenfree" tabindex="0" aria-label="Masala Chai">
+      <img src="im18.jpg" alt="Masala Chai" />
+      <h3>Masala Chai</h3>
+      <p class="description">Spiced Indian tea brewed with milk and aromatic spices.</p>
+      <div class="options">
+        <label for="chai-milk">Milk Option</label>
+        <select id="chai-milk" name="chai-milk">
+          <option>Full Cream</option>
+          <option>Low Fat</option>
+          <option>Non-Dairy</option>
+        </select>
+      </div>
+      <p class="price">₹100</p>
+    </article>
+
+    <article class="dish-card beverage vegan glutenfree" tabindex="0" aria-label="Cold Brew Coffee">
+      <img src="im19.jpg" alt="Cold Brew Coffee" />
+      <h3>Cold Brew Coffee</h3>
+      <p class="desciption">Smooth cold brew coffee served over ice.</p>
+      <div class="options">
+        <label for="coffee-sugar">Sugar Level</label>
+        <select id="coffee-sugar" name="coffee-sugar">
+          <option>No Sugar</option>
+          <option>Less Sugar</option>
+          <option>Normal</option>
+          <option>Extra Sugar</option>
+        </select>
+      </div>
+      <p class="price">₹130</p>
+    </article>
+
+  </div>
+</div>
+
+</body>
+</html>
